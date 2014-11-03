@@ -20,7 +20,7 @@ public class FornecedorController {
 
 	@RequestMapping("adicionaFornecedor")
 	public String adiciona(@Valid Fornecedor fornecedor, BindingResult result) {
-	
+
 		ObjectError error = new ObjectError("nome",
 				"Já existe um fornecedor cadastro com esse nome.");
 		result.addError(error);

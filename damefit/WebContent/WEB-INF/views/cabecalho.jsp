@@ -76,16 +76,14 @@
 					<li><a href="#">Cliente</a></li>
 				</ul>
 				<ul class="nav nav-sidebar">
-					<li><a href="">Nav item</a></li>
-					<li><a href="">Nav item again</a></li>
-					<li><a href="">One more nav</a></li>
-					<li><a href="">Another nav item</a></li>
-					<li><a href="">More navigation</a></li>
+					<li><a href="">Compras</a></li>
+					<li><a href="">Vendas</a></li>
+					
 				</ul>
 				<ul class="nav nav-sidebar">
-					<li><a href="">Nav item again</a></li>
-					<li><a href="">One more nav</a></li>
-					<li><a href="">Another nav item</a></li>
+					<li><a href="">Relatorio Vendas</a></li>
+					<li><a href="">Relatorio de Compras</a></li>
+					<li><a href="">Relatorios a Receber</a></li>
 				</ul>
 			</div>
 

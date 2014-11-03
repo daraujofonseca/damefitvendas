@@ -28,9 +28,12 @@ public class FornecedorDao {
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
 			stmt.setString(1,
 					fornecedor.getNome().trim().replaceAll("\\s+", " "));
-			stmt.setString(2, fornecedor.getEndereco());
-			stmt.setString(3, fornecedor.getBairro());
-			stmt.setString(4, fornecedor.getCidade());
+			stmt.setString(2,
+					fornecedor.getEndereco().trim().replaceAll("\\s+", " "));
+			stmt.setString(3,
+					fornecedor.getBairro().trim().replaceAll("\\s+", " "));
+			stmt.setString(4,
+					fornecedor.getCidade().trim().replaceAll("\\s+", " "));
 			stmt.setString(5, fornecedor.getUf());
 			stmt.setString(6, fornecedor.getCep());
 			stmt.setString(7, fornecedor.getTelefone());
@@ -128,11 +131,13 @@ public class FornecedorDao {
 
 		try {
 			PreparedStatement stmt = this.connection
-					.prepareStatement("select *from fornecedor");
+					.prepareStatement("select *from fornecedor where nome=?");
+			stmt.setString(1, fornecedor.getNome());
+
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
-
+				System.out.println(rs.getString("nome"));
 				if (fornecedor.getNome().trim().replaceAll("\\s+", " ")
 						.toLowerCase()
 						.equals(rs.getString("nome").toLowerCase())) {
